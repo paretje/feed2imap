@@ -145,7 +145,7 @@ class ConfigFeed
 
   def needfetch(lastcheck)
     return true if @freq.nil?
-    return (lastcheck + @freq * 3600) < Time::now
+    return (lastcheck + @freq * 60) < Time::now
   end
 
   def encode_utf7(s)
